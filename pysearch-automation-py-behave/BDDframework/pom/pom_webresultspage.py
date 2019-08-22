@@ -6,10 +6,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
-from Helpers.Browsers import Browser
+# from Helpers.Browsers import Browser
 from locators.Locator import *
 
 
 
-class Web(Browser):
-    True
+class Web:
+    
+    def __init__(self,browserObj):
+        self.driver = browserObj.driver

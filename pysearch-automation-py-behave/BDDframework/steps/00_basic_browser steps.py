@@ -1,7 +1,7 @@
 from behave import *
-from pom.pom_basic_operations import *
-from pom.pom_webresultspage import *
-from pom.pom_homepage import *
+# from pom.pom_basic_operations import *
+# from pom.pom_webresultspage import *
+# from pom.pom_homepage import *
 
 
 
@@ -18,8 +18,8 @@ def step_impl(context, url):
 def step_impl(context, title):
     context.basic.do_check_page_title(title)
 
-@when(u'page URL {does_donot} contain {search_term}')
-@then(u'page URL {does_donot} contain {search_term}')
+@when(u'page URL {does_donot} contain "{search_term}"')
+@then(u'page URL {does_donot} contain "{search_term}"')
 def step_impl(context, does_donot, search_term):
     if does_donot == "do not":
         assert (search_term not in context.browser.driver.current_url) == True

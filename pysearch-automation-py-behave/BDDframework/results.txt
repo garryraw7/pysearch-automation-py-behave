@@ -1,0 +1,64 @@
+Using default path "./features"
+Trying base directory: /Users/abk/dev/python_a/All/mainGit/pysearch-automation-py-behave/pysearch-automation-py-behave/BDDframework/features
+Trying base directory: /Users/abk/dev/python_a/All/mainGit/pysearch-automation-py-behave/pysearch-automation-py-behave/BDDframework
+Before all scenario
+@webpage @all
+Feature: Pysearch Web Results page verification # features/02_web_result_page_features_v1.feature:2
+before scenario hook initialising browser
+
+
+Instantiate Driver via Browser Class
+
+
+
+  @title
+  Scenario: Verify the page title on the Web Result page.  # features/02_web_result_page_features_v1.feature:7
+    Given User loads https://www.startpage.com in browser  # steps/00_basic_browser steps.py:8
+    When User search "tesla" on homepage                   # steps/01_homepage_steps_v1.py:7
+    Then page title is "Startpage.com Search results"      # steps/00_basic_browser steps.py:16
+Page Title Matched - expected: Startpage.com Search results actual: Startpage.com Search results
+after scenario hook quitting browser
+before scenario hook initialising browser
+
+
+Instantiate Driver via Browser Class
+
+
+
+  @title
+  Scenario Outline: Verify that the default search technique do not expose search term in URL -- @1.1 Test Data  # features/02_web_result_page_features_v1.feature:23
+    Given User loads https://www.startpage.com in browser                                                        # steps/00_basic_browser steps.py:8
+    When User search "tiger" on homepage                                                                         # steps/01_homepage_steps_v1.py:7
+    Then page URL do not contain "tiger"                                                                         # steps/00_basic_browser steps.py:21
+after scenario hook quitting browser
+before scenario hook initialising browser
+
+
+Instantiate Driver via Browser Class
+
+
+
+  @title
+  Scenario Outline: Verify that the default search technique do not expose search term in URL -- @1.2 Test Data  # features/02_web_result_page_features_v1.feature:24
+    Given User loads https://www.startpage.com in browser                                                        # steps/00_basic_browser steps.py:8
+    When User search "jfk" on homepage                                                                           # steps/01_homepage_steps_v1.py:7
+    Then page URL do not contain "jfk"                                                                           # steps/00_basic_browser steps.py:21
+after scenario hook quitting browser
+before scenario hook initialising browser
+
+
+Instantiate Driver via Browser Class
+
+
+
+  @navigation
+  Scenario: Verify that the Header bar shows Startpage logo  # features/02_web_result_page_features_v1.feature:31
+    Given User loads https://www.startpage.com in browser    # steps/00_basic_browser steps.py:8
+    When User search "tesla" on homepage                     # steps/01_homepage_steps_v1.py:7
+    Then page URL do not contain "tesla"                     # steps/00_basic_browser steps.py:21
+after scenario hook quitting browser
+
+1 feature passed, 0 failed, 0 skipped
+4 scenarios passed, 0 failed, 0 skipped
+12 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m28.154s

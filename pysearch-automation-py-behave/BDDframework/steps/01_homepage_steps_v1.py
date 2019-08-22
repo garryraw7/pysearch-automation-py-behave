@@ -1,7 +1,7 @@
 from behave import *
-from pom.pom_basic_operations import *
-from pom.pom_webresultspage import *
-from pom.pom_homepage import *
+# from pom.pom_basic_operations import *
+# from pom.pom_webresultspage import *
+# from pom.pom_homepage import *
 
 
 @given(u'User search "{search_term}" on homepage')
