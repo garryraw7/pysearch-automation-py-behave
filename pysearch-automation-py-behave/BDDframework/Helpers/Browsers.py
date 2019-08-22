@@ -13,3 +13,6 @@ class Browser(object):
     def close(context):
         context.driver.close()
 
+    def quit(context):
+        context.driver.quit()
+

@@ -11,10 +11,10 @@ def before_all(context):
     context.web = Web()
 
 def before_scenario(context, scenario):
-    print("before scenario hook showing starting scenario name as")
+    print("before scenario hook initialising browser")
     context.browser = Browser()
 
 
 def after_scenario(context, scenario):
-    print("after scenario hook showing ending scenario name as")
-    context.browser.close()
+    print("after scenario hook quitting browser")
+    context.browser.quit()
