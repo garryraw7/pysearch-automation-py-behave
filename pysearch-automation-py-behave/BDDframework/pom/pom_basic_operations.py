@@ -1,6 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
 import time
 import os
 from selenium import webdriver  # pip install selenium==3.5.0
@@ -14,10 +11,6 @@ from locators.Locator import *
 
 class Basic(Browser):
 
-    def Teardown(self):
-        print("Closing Driver")
-        self.driver.quit()
-
     def do_open_url(self, url):
         self.driver.get(url)
 
@@ -26,3 +19,7 @@ class Basic(Browser):
         atitle = self.driver.title
         assert atitle == title
         print("Page Title Matched - expected: " +title+ " actual: "+atitle)
+
+
+    def do_get_page_url(self):
+        self.driver.current_url

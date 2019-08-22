@@ -4,7 +4,7 @@ chromeDriverExe = 'Files\Resources\Drivers\chrome\chromedriver.exe'
 
 
 class Browser(object):
-    print("\n\nInstantiate Driver\n\n")
+    print("\n\nInstantiate Driver via Browser Class\n\n")
     driver = webdriver.Chrome(executable_path=chromeDriverExe)
     driver.implicitly_wait(30)
     driver.set_page_load_timeout(30)

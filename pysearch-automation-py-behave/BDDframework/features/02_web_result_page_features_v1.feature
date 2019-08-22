@@ -1,6 +1,8 @@
 @webpage @all
 Feature: Pysearch Web Results page verification
 
+
+
   @title
   Scenario: Verify the page title on the Web Result page.
     Given User loads https://www.startpage.com in browser
@@ -14,9 +16,19 @@ Feature: Pysearch Web Results page verification
   # You may use a Scenario Outline like below to achieve this#
     Given User loads https://www.startpage.com in browser
     When User search "<search_term>" on homepage
-#      Then page URL do not contain <search_term>
+    Then page URL do not contain <search_term>
 
     Examples: Test Data
           | search_term	|
           | tiger 		|
           | jfk			|
+
+
+
+
+
+    @navigation
+    Scenario: Verify that the Header bar shows Startpage logo
+      Given User loads www.startpage.com in browser
+      And User search "tesla" on homepage
+#      Then User see Startpage logo is visible on Results Page

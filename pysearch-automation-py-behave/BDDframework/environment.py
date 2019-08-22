@@ -6,15 +6,16 @@ from pom.pom_webresultspage import Web
 
 
 def before_all(context):
+    context.browser = Browser()
     context.basic = Basic()
     context.home_page = Homepage()
     context.web = Web()
 
 def before_scenario(context, scenario):
     print("before scenario hook initialising browser")
-    context.browser = Browser()
+
 
 
 def after_scenario(context, scenario):
     print("after scenario hook quitting browser")
-    context.browser.quit()
+    context.browser.driver.quit()
