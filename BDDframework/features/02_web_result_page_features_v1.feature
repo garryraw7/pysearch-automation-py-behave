@@ -24,11 +24,8 @@ Feature: Pysearch Web Results page verification
           | jfk			|
 
 
-
-
-
     @navigation
     Scenario: Verify that the Header bar shows Startpage logo
-      Given User loads www.startpage.com in browser
+      Given User loads https://www.startpage.com in browser
       And User search "tesla" on homepage
 #      Then User see Startpage logo is visible on Results Page

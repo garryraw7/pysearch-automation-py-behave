@@ -5,8 +5,5 @@ from pom.pom_homepage import *
 
 
 
-@when(u'User see {Startpage logo} is visible on Results Page')
-@then(u'User see {Startpage logo} is visible on Results Page')
-
-
-
+# @when(u'User see {Startpage logo} is visible on Results Page')
+# @then(u'User see {Startpage logo} is visible on Results Page')
