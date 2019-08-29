@@ -12,4 +12,7 @@ from locators.Locator import *
 
 
 class Web(Browser):
-    True
+
+
+    def is_header_logo_available(self):
+        self.driver.find_element_by_css_selector(Results_page_header_logo)
